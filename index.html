@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="funciones.js"></script>
+    <title>Formulario de registro</title>
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1><strong>Formulario de registro</strong></h1>
+    <br>
+    <strong><!-- Programa hecho por Cadena Chacha Omar Ramiro
+   del 4AMPr -->
+    </strong>
+    <form id='formulario' name='registro' method='POST'><input type='hidden' name='form-name' value='registro' />
+	
+	
+	
+      
+        <strong>
+        <label for="nombre">1. ¿Cuál es su nombre?</label>
+        </strong><br /><br />
+        <input
+          type="name"
+          placeholder="Ejemplo: Ana"
+          onkeypress="return sololetras(event)"
+          id="nombre"
+          name="Nombre"
+          required
+        />
+        <br />
+		
+		
+        <strong><br />
+        <label for="apellido_paterno">2. ¿Cuál es su apellido paterno?</label>
+        </strong><br /><br />
+        <input
+          type="name"
+          placeholder="Ejemplo: Hernández"
+          onkeypress="return sololetras(event)"
+          id="apellido_paterno"
+          name="Apellido paterno"
+          required/>
+
+        <br><br>
+
+        <label for="apellido_materno"><strong>3. ¿Cuál es su apellido materno?</strong></label>
+        <br /><br />
+        <input
+          type="name"
+          placeholder="Ejemplo: López"
+          onkeypress="return sololetras(event)"
+          id="apellido_materno"
+          name="Apellido materno"
+          required/> <br />
+		  
+		  
+		  
+        <strong><br />
+        <label for="edad">4. ¿Cuál es su edad?</label>
+        </strong><br /><br />
+        <input type="number" min="1" max="99" name="4. Edad" id="edad" required />
+        <br /><br />
+		
+		
+        <label for="nac"><strong>5. ¿Cuál es su fecha de nacimiento?</strong></label>
+        <br /><br />
+        <input type="date" name="5. Fecha de nacimiento" id="Fecha de nacimiento" required />
+        <br /><br />
+		
+		
+        <label for="correo"><strong>6. Escriba su correo electrónico</strong></label>
+        <br /><br />
+        <input type="email" placeholder="nombre@dominio" id="correo" name="6. Correo electrónico" required/>
+        <br /><br />
+
+
+
+
+        
+        <label>
+          <label><b>7. ¿Qué sexo es?</b></label>
+		  <br><br>
+          <input
+            type="radio"
+            name="7. Sexo"
+            value="Hombre"
+            id="genero_0"
+            required/>
+          <label>Hombre</label>
+		  </label>
+        <br /><br />
+		
+		
+		
+		
+		
+        <label>
+          <input
+            type="radio"
+            name="7. Sexo"
+            value="Mujer"
+            id="genero_1"
+            required
+          /><label> Mujer</label>
+		  </label><br>
+
+        <br /><br />
+        <label><strong>8. Escriba su número telefónico</strong></label>
+        <br /><br />
+        <input
+          type="number"
+          id="tel"
+          placeholder="Ejem.: 999-999-9999"
+          min="1"
+          name="8. Numero telefónico"
+          required/>  
+        <br /><br />
+		
+		
+		
+        <label for="direccion"><strong>9. Escriba su dirección</strong></label> 
+        <br><br>
+        <textarea name="Dirección" id="direccion" cols="30" rows="10" required></textarea>
+        <br><br>
+		
+		
+		
+        
+        <label for="postal"><strong>10. Escriba su código postal</strong></label> 
+        <br />
+		
+		
+		
+        <input type="number" min="1" id="CodPost" name="10. Código postal" required />
+        <br /><br />
+		
+		
+        <label><strong>11. Seleccione el estado de donde es usted:</strong></label>
+        <br /><br />
+		
+		
+        <select name="11. Estado de donde es" id="estado" required>
+          <option value="" selected="selected"></option>
+          <option>Aguascalientes</option>
+          <option>Baja California</option>
+          <option>Campeche</option>
+          <option>Chiapas</option>
+          <option>Chihuahua</option>
+          <option>Coahuila</option>
+          <option>Colima</option>
+          <option>Ciudad de México</option>
+          <option>Durango</option>
+          <option>Estado de México</option>
+          <option>Guanajuato</option>
+          <option>Guerrero</option>
+          <option>Hidalgo</option>
+          <option>Jalisco</option>
+          <option>Michoacán</option>
+          <option>Morelos</option>
+          <option>Nayarit</option>
+          <option>Nuevo León</option>
+          <option>Oaxaca</option>
+          <option>Puebla</option>
+          <option>Querétaro</option>
+          <option>Quintana Roo</option>
+          <option>San Luis Potosí</option>
+          <option>Sinaloa</option>
+          <option>Sonora</option>
+          <option>Tabasco</option>
+          <option>Tamaulipas</option>
+          <option>Tlaxcala</option>
+          <option>Veracruz</option>
+          <option>Yucatán</option>
+          <option>Zacatecas</option>
+          <option>Soy extranjero</option>
+        </select>
+        <br /><br />
+        
+		
+		
+		
+          <label><strong>12. ¿Cuenta con estudios escolares?</strong></label>
+          <br />
+            
+			<label>
+			
+			<input type="radio" name="12. Estudios" value="sí" Onclick="Enable();" required />
+      <label> Sí</label>
+			</label>
+
+			<label>
+			<input type="radio" name="12. Estudios" value="no" Onclick="Disable();" required />
+			<label>No</label>
+			</label>
+			<br><br>
+
+			<label>
+			<input type="checkbox" name="Educacion_preescolar" value="sí" id="E_Preescolar"/>
+			Educacion Preescolar
+			</label><br>
+
+			<label>
+			<input type="checkbox" name="Educacion_primaria" value="sí" id="E_Primaria"/>
+			Educacion Primaria
+			</label><br>
+
+			<label>
+			<input type="checkbox" name="Educacion_secundaria" value="sí" id="E_Secundaria" />
+			Educacion Secundaria
+			</label><br>
+
+			<label>
+			<input type="checkbox" name="Educacion_media_superior" value="sí" id="E_Media_Superior" />
+			Educacion Media Superior
+			</label><br>
+
+			<label>
+			<input type="checkbox" name="Educacion_superior" value="sí" id="E_Superior" />
+			Educacion Superior
+			</label><br><br>
+			
+		
+		
+		
+        
+        <label for="ocupa"><strong>13. ¿De qué trabaja?</strong></label> 
+        <br><br>
+        <input type="text" name="13. Trabajo" id="Trabajo" required>
+        <br /><br />
+		
+		
+        <label for="salario"><strong>14. ¿Cuáles son sus ingresos mensuales?</strong></label>
+      <br><br>
+        <select id="ingresos" name="14. ¿Cuáles son sus ingresos mensuales?" required>
+          <option value=""></option>
+          <option>Menos de $1000</option>
+          <option>$1000-$3999</option>
+          <option>$4000-$8999</option>
+          <option>$9000 o más</option>
+        </select>
+        <br>
+        <br />
+        
+        <br /><br />
+        <label for="civil"><strong>15. ¿Cuál es su estado civil?</strong></label>
+        <br>
+		  <br />
+        <label>
+            <input type="radio" name="15. Estado civil" value="Solter@" id="civil_1" required>
+            Solter@</label>
+          <br><br>
+          <label>
+            <input type="radio" name="15. Estado civil" value="Casad@" id="civil_2" />
+            Casad@</label>
+          <br><br>
+          <label>
+            <input type="radio" name="15. Estado civil" value="Viud@" id="civil_3">
+            Viud@</label>
+          <br><br>
+          <label>
+            <input type="radio" name="15. Estado civil" value="Concubinato" id="civil_4">
+            Concubinato</label>
+            <br><br><br><br>
+        <button type="submit">Enviar</button>
+      
+    </form>
+  </div>
+  </body>
+</html>
